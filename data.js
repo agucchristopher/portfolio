@@ -1,21 +1,22 @@
 const siteData = {
   "profile": {
-    "name": "Your",
-    "surname": "Name",
-    "logo": "YN",
+    "name": "Chijikem Christopher",
+    "surname": "Agu",
+    "logo": "Ace",
     "fullTitle": "Software Developer · Multi‑Market Trader · Construction Manager",
-    "bio": "I’m an 18‑year‑old software developer based in <strong>Your City, Country</strong>. I’m also a multi‑market trader and a construction manager focused on execution. On the software side, I ship responsive UIs, small APIs, and automations that make work smoother. In markets, I follow rules, journal performance, and review weekly. In construction, I care about <strong>planning, safety, quality</strong>, and communication — because outcomes matter.",
+    "bio": "I’m an 18‑year‑old software developer. I’m also a multi‑market trader and a construction manager focused on execution. On the software side, I ship responsive UIs, small APIs, and automations that make work smoother. In markets, I follow rules, journal performance, and review weekly. In construction, I care about <strong>planning, safety, quality</strong>, and communication — because outcomes matter.",
     "age": 18,
-    "projectsCount": "5+",
+    "projectsCount": "15+",
     "timezone": "UTC±X",
-    "location": "Your City, Country",
+    "location": "Lagos, Nigeria",
     "specialization": "Frontend & APIs",
     "markets": "FX · Indices · Crypto",
     "ops": "Scheduling · QA/QC",
     "hireable": true,
-    "email": "you@email.com",
-    "github": "your-username",
-    "linkedin": "your-handle"
+    "email": "aguchris740@gmail.com",
+    "github": "agucchristopher",
+    "twitter": "acedotbin",
+    "instagram": "agucchristopher"
   },
   "skills": [
     { "icon": "💻", "name": "Software Development", "desc": "Web apps, small APIs, and tools that solve real problems." },

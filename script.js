@@ -29,7 +29,11 @@ function populateSite(data) {
   // About
   const aboutText = document.getElementById("about-text");
   if (aboutText) {
-    aboutText.innerHTML = p.bio.split(". ").map(s => `<p>${s}.</p>`).join("");
+    aboutText.innerHTML = p.bio.split(". ").map(s => {
+      let sentence = s.trim();
+      if (!sentence.endsWith(".")) sentence += ".";
+      return `<p>${sentence}</p>`;
+    }).join("");
   }
   document.querySelectorAll(".info-location").forEach(el => el.textContent = p.location);
   document.querySelectorAll(".info-timezone").forEach(el => el.textContent = p.timezone);
@@ -107,11 +111,25 @@ function populateSite(data) {
   }
 
   // Contact
-  document.getElementById("contact-email").textContent = p.email;
-  document.getElementById("contact-github").textContent = p.github;
-  document.getElementById("contact-github-link").href = `https://github.com/${p.github}`;
-  document.getElementById("contact-linkedin").textContent = p.linkedin;
-  document.getElementById("contact-linkedin-link").href = `https://linkedin.com/in/${p.linkedin}`;
+  const contactLinksContainer = document.getElementById("contact-links");
+  if (contactLinksContainer) {
+    const socials = [
+      { id: "email", label: "Email", url: `mailto:${p.email}`, handle: p.email },
+      { id: "github", label: "GitHub", url: `https://github.com/${p.github}`, handle: p.github },
+      { id: "twitter", label: "X (Twitter)", url: `https://x.com/${p.twitter}`, handle: p.twitter },
+      { id: "instagram", label: "Instagram", url: `https://instagram.com/${p.instagram}`, handle: p.instagram }
+    ];
+
+    contactLinksContainer.innerHTML = socials.map(s => `
+      <a href="${s.url}" target="_blank" rel="noreferrer" class="contact-link">
+        <div class="contact-link-info">
+          <div class="contact-link-platform">${s.label}</div>
+          <div class="contact-link-handle">${s.handle}</div>
+        </div>
+        <span class="contact-link-arrow" aria-hidden="true">↗</span>
+      </a>
+    `).join("");
+  }
   document.getElementById("contact-hire-status").textContent = p.hireable ? "✓ Open to Opportunities" : "✓ Currently Busy";
 
   // Re-run scroll reveal for new elements
