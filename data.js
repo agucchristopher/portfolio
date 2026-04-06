@@ -4,8 +4,8 @@ const siteData = {
     "surname": "Agu",
     "logo": "Ace",
     "fullTitle": "Full Stack & Mobile Developer · Multi‑Market Trader",
-    "bio": "I am an 18-year-old developer. I build mobile and web applications across the full stack. I am also a trader and a construction manager who focuses on getting things done. In software, I use various tools to build cross-platform apps and backends. In markets, I follow strict rules and review my performance weekly. In construction, I care about <strong>safety and quality</strong> — because results matter.",
-    "age": 18,
+    "bio": "I am a developer who builds mobile and web applications across the full stack. I am also a trader and a construction manager who focuses on getting things done. In software, I use various tools to build cross-platform apps and backends. In markets, I follow strict rules and review my performance weekly. In construction, I care about <strong>safety and quality</strong> — because results matter.",
+    "birthDate": "2007-10-02",
     "projectsCount": "15+",
     "timezone": "UTC±X",
     "location": "Lagos, Nigeria",
@@ -57,6 +57,20 @@ const siteData = {
         "Reviewed performance weekly to improve execution.",
         "Studied volatility, sessions, and market structure."
       ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc Computer Science",
+      "period": "2023 — Present",
+      "school": "Michael Okpara University of Agriculture, Umuahia",
+      "desc": "Focusing on software architecture, algorithms, and full-stack development."
+    },
+    {
+      "degree": "Senior Secondary School Certificate (SSCE)",
+      "period": "2020 — 2022",
+      "school": "Solid Steps High School",
+      "desc": "Studied core sciences and arts with focus on mathematics and engineering basics."
     }
   ],
   "work": [

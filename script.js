@@ -8,6 +8,17 @@ function loadSiteData() {
   populateSite(siteData);
 }
 
+function calculateAge(birthDate) {
+  const birth = new Date(birthDate.replace(/-/g, '/'));
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  const m = today.getMonth() - birth.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+}
+
 function populateSite(data) {
   const p = data.profile;
 
@@ -22,7 +33,8 @@ function populateSite(data) {
   document.getElementById("hero-surname").textContent = p.surname;
   document.getElementById("hero-title").textContent = p.fullTitle;
   document.getElementById("hero-desc").innerHTML = p.bio;
-  document.getElementById("stat-age").textContent = p.age;
+  const currentAge = calculateAge(p.birthDate);
+  document.getElementById("stat-age").textContent = currentAge;
   document.getElementById("stat-projects").textContent = p.projectsCount;
   document.getElementById("stat-timezone").textContent = p.timezone;
 
@@ -36,6 +48,12 @@ function populateSite(data) {
     }).join("");
   }
   document.querySelectorAll(".info-location").forEach(el => el.textContent = p.location);
+  const birthDate = new Date(p.birthDate.replace(/-/g, '/'));
+  const formattedBirthDate = birthDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  const birthdateEl = document.getElementById("info-birthdate");
+  if (birthdateEl) birthdateEl.textContent = formattedBirthDate;
+  const ageEl = document.getElementById("info-age");
+  if (ageEl) ageEl.textContent = `${currentAge} Years`;
   document.querySelectorAll(".info-timezone").forEach(el => el.textContent = p.timezone);
   document.querySelectorAll(".info-specialization").forEach(el => el.textContent = p.specialization);
   document.querySelectorAll(".info-markets").forEach(el => el.textContent = p.markets);
@@ -74,6 +92,26 @@ function populateSite(data) {
           <ul class="timeline-points">
             ${exp.points.map(point => `<li>${point}</li>`).join("")}
           </ul>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // Education
+  const eduTimeline = document.getElementById("edu-timeline");
+  if (eduTimeline && data.education) {
+    eduTimeline.innerHTML = data.education.map(edu => `
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-role">${edu.degree}</span>
+            <span class="timeline-period">${edu.period}</span>
+          </div>
+          <div class="timeline-company">${edu.school}</div>
+          <p class="timeline-desc" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); line-height: 1.7;">
+            ${edu.desc}
+          </p>
         </div>
       </div>
     `).join("");
