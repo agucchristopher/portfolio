@@ -3,13 +3,13 @@ const siteData = {
     "name": "Chijikem Christopher",
     "surname": "Agu",
     "logo": "Ace",
-    "fullTitle": "Software Developer · Multi‑Market Trader · Construction Manager",
-    "bio": "I’m an 18‑year‑old software developer. I’m also a multi‑market trader and a construction manager focused on execution. On the software side, I ship responsive UIs, small APIs, and automations that make work smoother. In markets, I follow rules, journal performance, and review weekly. In construction, I care about <strong>planning, safety, quality</strong>, and communication — because outcomes matter.",
+    "fullTitle": "Full Stack & Mobile Developer · Multi‑Market Trader",
+    "bio": "I am an 18-year-old developer. I build mobile and web applications across the full stack. I am also a trader and a construction manager who focuses on getting things done. In software, I use various tools to build cross-platform apps and backends. In markets, I follow strict rules and review my performance weekly. In construction, I care about <strong>safety and quality</strong> — because results matter.",
     "age": 18,
     "projectsCount": "15+",
     "timezone": "UTC±X",
     "location": "Lagos, Nigeria",
-    "specialization": "Frontend & APIs",
+    "specialization": "Full Stack & Mobile",
     "markets": "FX · Indices · Crypto",
     "ops": "Scheduling · QA/QC",
     "hireable": true,
@@ -19,14 +19,14 @@ const siteData = {
     "instagram": "agucchristopher"
   },
   "skills": [
-    { "icon": "💻", "name": "Software Development", "desc": "Web apps, small APIs, and tools that solve real problems." },
-    { "icon": "🧩", "name": "Frontend Engineering", "desc": "Responsive UI, accessibility basics, component-driven design." },
+    { "icon": "💻", "name": "Software Development", "desc": "Web apps, RESTful APIs, and robust backends that solve real problems." },
+    { "icon": "📱", "name": "Mobile & Full Stack", "desc": "Cross-platform apps (React Native), Express.js backends, and full-cycle product delivery." },
     { "icon": "⛓️", "name": "APIs & Automation", "desc": "Integrations, scripts, and workflow automation to cut busywork." },
     { "icon": "📈", "name": "Multi‑Market Trading", "desc": "Risk rules, journaling, review loops, process over impulse." },
     { "icon": "🧱", "name": "Construction Management", "desc": "Scheduling, coordination, reporting, QA/QC discipline." },
     { "icon": "🧠", "name": "Systems Thinking", "desc": "Clear decisions, measurable outcomes, continuous improvement." }
   ],
-  "tags": ["JavaScript", "TypeScript", "React", "Node.js", "Python", "SQL", "Git", "REST APIs", "Automation", "Risk Management", "Scheduling", "QA/QC"],
+  "tags": ["React Native", "Express.js", "React", "Node.js", "JavaScript", "TypeScript", "Python", "SQL", "Git", "REST APIs", "Automation", "Risk Management"],
   "experience": [
     {
       "role": "Construction Manager (Assistant / Junior)",
@@ -43,9 +43,9 @@ const siteData = {
       "period": "2024 — Present",
       "company": "Web & Automation",
       "points": [
-        "Built portfolio apps with clean UI, reusable components, and basic deployments.",
-        "Automated reporting and data cleanup with scripts.",
-        "Practiced Git workflows and shipping iteratively."
+        "Built cross-platform mobile apps with React Native & Expo for real-world utility.",
+        "Engineered full stack dashboards and APIs using Node.js and SQL.",
+        "Managed the full lifecycle from design to deployment on app stores."
       ]
     },
     {
